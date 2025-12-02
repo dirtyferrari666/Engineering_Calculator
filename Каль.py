@@ -1,7 +1,6 @@
 import flet as ft
 import math
 
-
 def main(page: ft.Page):
     # Настройка страницы
     page.title = "Инженерный калькулятор"
@@ -221,4 +220,5 @@ def main(page: ft.Page):
     page.add(calculator)
 
 if __name__ == "__main__":
+
     ft.app(target=main)
