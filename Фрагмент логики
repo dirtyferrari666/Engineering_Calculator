@@ -1,0 +1,81 @@
+def button_click(e):
+    if current_input.value == "0" or current_input.value == "Error":
+        current_input.value = e.control.text
+    else:
+        current_input.value += e.control.text
+    page.update()
+def equals_click(e):
+    try:
+        expression = current_input.value
+        expression = expression.replace('π', str(math.pi))
+        expression = expression.replace('e', str(math.e))
+        expression = expression.replace('^', '**')
+        expression = expression.replace('√', 'math.sqrt')
+        expression = expression.replace('sin', 'math.sin')
+        expression = expression.replace('cos', 'math.cos')
+        expression = expression.replace('tan', 'math.tan')
+        expression = expression.replace('log', 'math.log10')
+        expression = expression.replace('ln', 'math.log')
+
+        result = eval(expression)
+        current_input.value = str(result)
+    except:
+        current_input.value = "Error"
+
+    page.update()
+def scientific_function(e):
+    try:
+        value = float(current_input.value)
+        function = e.control.text
+
+        if function == "sin":
+            result = math.sin(math.radians(value))
+        elif function == "cos":
+            result = math.cos(math.radians(value))
+        elif function == "tan":
+            result = math.tan(math.radians(value))
+        elif function == "√":
+            result = math.sqrt(value)
+        elif function == "x²":
+            result = value ** 2
+        elif function == "x³":
+            result = value ** 3
+        elif function == "1/x":
+            result = 1 / value
+        elif function == "log":
+            result = math.log10(value)
+        elif function == "ln":
+            result = math.log(value)
+        elif function == "π":
+            result = math.pi
+        elif function == "e":
+            result = math.e
+        else:
+            result = value
+
+        current_input.value = str(result)
+    except:
+        current_input.value = "Error"
+
+    page.update()
+  def memory_add(e):
+    nonlocal memory_value
+    try:
+        memory_value += float(current_input.value)
+    except:
+        pass
+
+def memory_subtract(e):
+    nonlocal memory_value
+    try:
+        memory_value -= float(current_input.value)
+    except:
+        pass
+
+def memory_recall(e):
+    current_input.value = str(memory_value)
+    page.update()
+
+def memory_clear(e):
+    nonlocal memory_value
+    memory_value = 0
