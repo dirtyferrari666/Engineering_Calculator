@@ -1,0 +1,59 @@
+green_bright_button = ft.ButtonStyle(bgcolor="#00cc44", color="#ffffff")  # для C, CE
+green_dark_button = ft.ButtonStyle(bgcolor="#145a32", color="#ffffff")
+green_accent_button = ft.ButtonStyle(bgcolor="#1e8449", color="#ffffff")  # для "="
+
+btn_width = 80
+btn_height = 55
+
+
+buttons = [
+        [
+            ft.ElevatedButton("MC", on_click=memory_clear, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("MR", on_click=memory_recall, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("M+", on_click=memory_add, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("M-", on_click=memory_subtract, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("CE", on_click=clear_entry_click, width=btn_width, height=btn_height, style=green_bright_button),
+        ],
+        [
+            ft.ElevatedButton("sin", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("cos", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("tan", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("√", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("C", on_click=clear_click, width=btn_width, height=btn_height, style=green_bright_button),
+        ],
+        [
+            ft.ElevatedButton("x²", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("x³", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("1/x", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("⌫", on_click=backspace_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("/", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+        ],
+        [
+            ft.ElevatedButton("7", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("8", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("9", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("log", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("*", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+        ],
+        [
+            ft.ElevatedButton("4", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("5", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("6", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("ln", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("-", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+        ],
+        [
+            ft.ElevatedButton("1", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("2", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("3", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("π", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("+", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+        ],
+        [
+            ft.ElevatedButton("0", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton(".", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("e", on_click=scientific_function, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("^", on_click=button_click, width=btn_width, height=btn_height, style=green_dark_button),
+            ft.ElevatedButton("=", on_click=equals_click, width=btn_width, height=btn_height, style=green_accent_button),
+        ],
+    ]
