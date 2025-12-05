@@ -5,7 +5,6 @@ green_accent_button = ft.ButtonStyle(bgcolor="#1e8449", color="#ffffff")  # дл
 btn_width = 80
 btn_height = 55
 
-
 buttons = [
         [
             ft.ElevatedButton("MC", on_click=memory_clear, width=btn_width, height=btn_height, style=green_dark_button),
